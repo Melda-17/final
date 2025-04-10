@@ -16,7 +16,7 @@ phases:
       - echo Pushing Docker image...
       - docker push $REPO_URI:$IMAGE_TAG
       - echo Writing imagedefinitions.json...
-      - printf '[{"name":"melda-app","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
+      - - printf '[{"name":"flask-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
 
 artifacts:
   files: imagedefinitions.json
